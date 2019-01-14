@@ -9,3 +9,11 @@ def index():
     '''
     print('hello')
     return render_template('index.html')
+
+
+@APP.route('/api/test')
+def test():
+    '''
+    returns test data for api test
+    '''
+    return jsonify({'test': 'API works'})
