@@ -15,6 +15,12 @@ cd client
 npm install
 ```
 
+3. Set up the database tables with the following command from the root of the project:
+
+```shell
+PYTHONPATH=. python create_tables.py
+```
+
 ## Running for development
 
 1. Start the flask server by running the following in the root of the project:
