@@ -2,23 +2,27 @@
 
 ## Setup
 
+### To run on local machine
+
 1. Install python backend dependencies by running the following in the root of the project:
 
 ```shell
 pip install -r requirements.txt
 ```
 
-2. Install javascript dependencies by first changing directories to the client folder then instaling them with:
-
-```shell
-cd client
-npm install
-```
+2. Create a .env file in the root of the project. You can set this up according to the .env_sample file including in project
 
 3. Set up the database tables with the following command from the root of the project:
 
 ```shell
-PYTHONPATH=. python create_tables.py
+PYTHONPATH=. python build_db.py
+```
+
+4. Install javascript dependencies by first changing directories to the client folder then instaling them with:
+
+```shell
+cd client
+npm install
 ```
 
 ## Running for development

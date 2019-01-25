@@ -1,4 +1,3 @@
-import os
 from api import APP
 
 if __name__ == '__main__':

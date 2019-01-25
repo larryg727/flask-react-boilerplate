@@ -1,8 +1,8 @@
 from flask import jsonify, request, render_template
-from api.app import APP
+from api.app import app
 
 
-@APP.route('/')
+@app.route('/')
 def index():
     '''
     Returns index.html from react production bundle
@@ -11,7 +11,7 @@ def index():
     return render_template('index.html')
 
 
-@APP.route('/api/test')
+@app.route('/api/test')
 def test():
     '''
     returns test data for api test
