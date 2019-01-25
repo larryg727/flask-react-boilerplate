@@ -22,7 +22,6 @@ def test():
 
 @app.route('/api/register', methods=['POST'])
 def register():
-    data = request.form
     # TODO: add password hashing before save and error handleing
-    result = data_service.addUser(data)
+    result = data_service.addUser(request.form)
     return jsonify({'success': result})

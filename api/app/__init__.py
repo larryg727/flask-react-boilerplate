@@ -1,5 +1,6 @@
 import os
 from flask import Flask
+from flask_bcrypt import Bcrypt
 from flask_sqlalchemy import SQLAlchemy
 from config import db_uri
 
@@ -12,5 +13,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = '{0}/{1}'.format(
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Initialize DB
 db = SQLAlchemy(app)
+# Intiate bcrypt
+bcrypt = Bcrypt(app)
 # Import models - Must remain after db initialization
 from api.app import models
+
