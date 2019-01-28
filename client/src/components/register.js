@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
+import AppContext from '../AppContext';
 
 const RegisterForm = props => {
     let emailRef = React.createRef();
@@ -18,11 +20,11 @@ const RegisterForm = props => {
     return (
         <form onSubmit={e => handleSubmit(e)}>
             <label htmlFor="email">Email:</label>
-            <input type="email" name="email" ref={emailRef} />
+            <input type="email" name="email" ref={emailRef} required />
             <label htmlFor="password">Password:</label>
-            <input type="password" name="password" ref={passwordRef} />
+            <input type="password" name="password" ref={passwordRef} required />
             <label htmlFor="confirmPass">Confirm Password:</label>
-            <input type="password" name="confirmPass" ref={confirmPassRef} />
+            <input type="password" name="confirmPass" ref={confirmPassRef} required />
             <button type="submit">Sign Up</button>
         </form>
     );
@@ -69,4 +71,5 @@ class Register extends Component {
     }
 }
 
+Register.contextType = AppContext;
 export default Register;
